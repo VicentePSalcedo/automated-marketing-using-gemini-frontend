@@ -4,12 +4,18 @@
   justify-content: center; // Center horizontally
 }
 
+mat-card {
+  justify-content: center;
+  align-content: center;
+}
+
 .card-container {
   width: 400px;
   /* Constant width */
   padding: 20px;
   box-sizing: border-box;
   text-align: center; // Center content inside
+  justify-content: center;
 }
 
 .form-content {
@@ -32,14 +38,9 @@
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+  align-items: center;
 }
 
-.square-image {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
 
 @media (max-width: 768px) {
   .subscription-container {
@@ -61,4 +62,28 @@
 mat-form-field {
   width: 100%;
   margin-bottom: 15px;
+}
+
+// New styles for header and image card
+.centered-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-height: 50px;
+  margin-bottom: 10px;
+}
+
+.company-name {
+  margin: 0;
+}
+
+.image-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+mat-card-header {
+  text-align: center;
 }

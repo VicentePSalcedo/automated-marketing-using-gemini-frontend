@@ -1,80 +1,106 @@
-<p>subscription works!</p>
 <div class="subscription-container">
+
   <div class="card-container">
-    <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" class="form-content">
-      <mat-form-field appearance="outline">
-        <mat-label>Card Holder Name</mat-label>
-        <input matInput formControlName="cardHolderName">
-        @if (subscriptionForm.get('cardHolderName')?.hasError('required')){
-        <mat-error>
-          Card holder name is required.
-        </mat-error>
-        }
-      </mat-form-field>
+    <mat-card>
+      <mat-card-header>
+        <div class="centered-header">
+          <img src="your-logo.png" alt="Company Logo" class="logo">
+          <h2 class="company-name">Your Company Name</h2>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" class="form-content">
+          <mat-form-field appearance="outline">
+            <mat-label>Card Holder Name</mat-label>
+            <input matInput formControlName="cardHolderName">
+            <!-- @if (subscriptionForm.get('cardHolderName')?.hasError('required')){ -->
+            <!-- <mat-error> -->
+            <!-- Card holder name is required. -->
+            <!-- </mat-error> -->
+            <!-- } -->
+          </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Card Number</mat-label>
-        <input matInput formControlName="cardNumber">
-        @if (subscriptionForm.get('cardNumber')?.hasError('required')){
-        <mat-error>
-          Card number is required.
-        </mat-error>
-        }
-        @if (subscriptionForm.get('cardNumber')?.hasError('pattern')){
-        <mat-error>
-          Invalid card number.
-        </mat-error>
-        }
-      </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Card Number</mat-label>
+            <input matInput formControlName="cardNumber">
+            <!-- @if (subscriptionForm.get('cardNumber')?.hasError('required')){ -->
+            <!-- <mat-error> -->
+            <!-- Card number is required. -->
+            <!-- </mat-error> -->
+            <!-- } -->
+            <!-- @if (subscriptionForm.get('cardNumber')?.hasError('pattern')){ -->
+            <!-- <mat-error> -->
+            <!-- Invalid card number. -->
+            <!-- </mat-error> -->
+            <!-- } -->
+          </mat-form-field>
 
-      <div class="expiry-cvv-row">
-        <mat-form-field appearance="outline">
-          <mat-label>MM/YY</mat-label>
-          <input matInput formControlName="expiry">
-          @if (subscriptionForm.get('expiry')?.hasError('required')){
-          <mat-error>
-            Expriy date is required.
-          </mat-error>
-          }
-          @if (subscriptionForm.get('expiry')?.hasError('pattern')){
-          <mat-error>
-            Invalid expiry date.
-          </mat-error>
-          }
-        </mat-form-field>
+          <div class="expiry-cvv-row">
+            <mat-form-field appearance="outline">
+              <mat-label>MM/YY</mat-label>
+              <input matInput formControlName="expiry">
+              <!-- @if (subscriptionForm.get('expiry')?.hasError('required')){ -->
+              <!-- <mat-error> -->
+              <!-- Expriy date is required. -->
+              <!-- </mat-error> -->
+              <!-- } -->
+              <!-- @if (subscriptionForm.get('expiry')?.hasError('pattern')){ -->
+              <!-- <mat-error> -->
+              <!-- Invalid expiry date. -->
+              <!-- </mat-error> -->
+              <!-- } -->
+            </mat-form-field>
 
-        <mat-form-field appearance="outline">
-          <mat-label>CVV</mat-label>
-          <input matInput formControlName="cvv">
-          @if (subscriptionForm.get('cvv')?.hasError('required')){
-          <mat-error>
-            CVV is required.
-          </mat-error>
-          }
-          @if (subscriptionForm.get('cvv')?.hasError('pattern')){
-          <mat-error>
-            Invalid CVV.
-          </mat-error>
-          }
-        </mat-form-field>
-      </div>
+            <mat-form-field appearance="outline">
+              <mat-label>CVV</mat-label>
+              <input matInput formControlName="cvv">
+              <!-- @if (subscriptionForm.get('cvv')?.hasError('required')){ -->
+              <!-- <mat-error> -->
+              <!-- CVV is required. -->
+              <!-- </mat-error> -->
+              <!-- } -->
+              <!-- @if (subscriptionForm.get('cvv')?.hasError('pattern')){ -->
+              <!-- <mat-error> -->
+              <!-- Invalid CVV. -->
+              <!-- </mat-error> -->
+              <!-- } -->
+            </mat-form-field>
+          </div>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Country</mat-label>
-        <input matInput formControlName="country">
-        @if (subscriptionForm.get('country')?.hasError('required')){
-        <mat-error>
-          Country is required.
-        </mat-error>
-        }
-      </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Country</mat-label>
+            <input matInput formControlName="country">
+            <!-- @if (subscriptionForm.get('country')?.hasError('required')){ -->
+            <!-- <mat-error> -->
+            <!-- Country is required. -->
+            <!-- </mat-error> -->
+            <!-- } -->
+          </mat-form-field>
 
-      <button mat-raised-button color="primary" type="submit">Begin 7 Day Trial</button>
-    </form>
+          <button mat-raised-button color="primary" type="submit">Begin 7 Day Trial</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
   </div>
 
-  <div class="image-text-container">
-    <img src="assets/placeholder-image.jpg" alt="Subscription Image" class="square-image">
-    <p class="image-text">Start your free 7-day trial and unlock premium features.</p>
+  <div class="card-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Get Ads Just Like This</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="placeholder-image.png" alt="Subscription Image" class="square-image">
+      <mat-card-content>
+        <p>
+          Is your small business ready to make its mark online? A unique domain name is your digital storefront, helping
+          customers find you and building brand credibility. Artorias Tech Lab makes domain registration simple and
+        </p>
+        <p>
+          ...
+        </p>
+      </mat-card-content>
+      <mat-card-footer>
+        <p class="image-text">Start your free 7-day trial and unlock premium features.</p>
+      </mat-card-footer>
+    </mat-card>
   </div>
 </div>
