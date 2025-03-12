@@ -4,7 +4,7 @@
   };
 
   outputs =
-    { self, nixpkgs, ... }:
+    { nixpkgs, ... }:
     let
       system = "x86_64-linux";
     in
@@ -17,8 +17,12 @@
         in
         pkgs.mkShell {
           packages = with pkgs; [
+            angular-language-server
             nodejs_23
             nodePackages."@angular/cli"
+            prettierd
+            typescript-language-server
+            vscode-langservers-extracted
           ];
           shellHook = '''';
         };

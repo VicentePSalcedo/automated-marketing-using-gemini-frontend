@@ -1,0 +1,64 @@
+.subscription-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; // Center horizontally
+}
+
+.card-container {
+  width: 400px;
+  /* Constant width */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center; // Center content inside
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column; // Column layout
+  align-items: stretch; // Stretch form fields
+}
+
+.expiry-cvv-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expiry-cvv-row mat-form-field {
+  width: 48%; // Adjust width as needed
+}
+
+.image-text-container {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.square-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .subscription-container {
+    flex-direction: column;
+    align-items: center; // Center mobile view
+  }
+
+  .card-container {
+    width: 90%;
+  }
+
+  .square-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
